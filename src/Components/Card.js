@@ -24,13 +24,13 @@ function Card({ content, modalDataRetrieve }) {
 
     //   toggle card flip on click 
     function handleCardClick() {
-        setIsFlipped(prevState => !prevState);
+        setIsFlipped(!isFlipped);
     }
 
     return (
-        <div className="flip-card" style={{ gridRowEnd: `span ${spans}` }} >
+        <div className="flip-card" style={{ gridRowEnd: `span ${spans}` }} onClick={handleCardClick} title='Click to Flip'>
             <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
-                <div className="flip-card-front" onClick={handleCardClick}>
+                <div className="flip-card-front">
                     <img
                         ref={imageRef}
                         src={content.url}
@@ -39,7 +39,7 @@ function Card({ content, modalDataRetrieve }) {
                     <h3>{content.breedName}</h3>
                 </div>
 
-                <div className="flip-card-back" onClick={handleCardClick}>
+                <div className="flip-card-back">
                     {content.breeds.map((data, index) => (
                         <div className='cat-detail' key={index}>
                             <p>{data.name}</p>
