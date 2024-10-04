@@ -26,7 +26,7 @@ The project utilizes the following:
 
 To run this project locally, follow these steps:
 
-1. Clone the repository: git clone [https://github.com/mohammadhashimmir/task-manager-hashim](https://github.com/mohammadhashimmir/catlore)
+1. Clone the repository: git clone(https://github.com/mohammadhashimmir/catlore)
 2. Navigate to the project directory:cd catlore
 3. Install dependencies: npm install
 4. Start the development server: npm start
