@@ -28,9 +28,9 @@ function Card({ content, modalDataRetrieve }) {
     }
 
     return (
-        <div className="flip-card" style={{ gridRowEnd: `span ${spans}` }} onClick={handleCardClick}>
+        <div className="flip-card" style={{ gridRowEnd: `span ${spans}` }} >
             <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
-                <div className="flip-card-front">
+                <div className="flip-card-front" onClick={handleCardClick}>
                     <img
                         ref={imageRef}
                         src={content.url}
@@ -39,7 +39,7 @@ function Card({ content, modalDataRetrieve }) {
                     <h3>{content.breedName}</h3>
                 </div>
 
-                <div className="flip-card-back">
+                <div className="flip-card-back" onClick={handleCardClick}>
                     {content.breeds.map((data, index) => (
                         <div className='cat-detail' key={index}>
                             <p>{data.name}</p>
